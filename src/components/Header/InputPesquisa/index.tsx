@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { SearchContext } from '../../../context/SearchContext'; 
+import { ContextoDeBusca } from '../../../context/SearchContext'; 
 import styled from 'styled-components';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const PesquisaContainer = styled.div`
+const ContainerDePesquisa = styled.div`
   position: relative;
-  width: 40rem; 
+  width: 30rem; 
 
   @media (max-width: 768px) {
     width: 13.5rem; 
@@ -32,7 +32,6 @@ const InputEstilizado = styled.input.attrs({ type: 'text' })`
   }
 `;
 
-
 const IconeEstilizado = styled.i`
   position: absolute;
   top: 50%;
@@ -44,41 +43,38 @@ const IconeEstilizado = styled.i`
     right: 0.5rem;
   }
 
-
   @media (max-width: 768px) {
     font-size: 1rem;
 
     &.lupa {
       right: 0.3rem;
     }
-
-   
   }
 `;
 
-const InputPesquisa: React.FC = () => {
-  const context = useContext(SearchContext);
+const InputDePesquisa: React.FC = () => {
+  const contexto = useContext(ContextoDeBusca);
 
-  if (!context) {
-    return <div>Error: Context is not available</div>;
+  if (!contexto) {
+    return <div>Erro: Contexto não está disponível</div>;
   }
 
-  const { setSearchTerm } = context;
+  const { setTermoDeBusca } = contexto;
 
-  const handleInputChange = (evento: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(evento.target.value);
+  const lidarComMudanca = (evento: React.ChangeEvent<HTMLInputElement>) => {
+    setTermoDeBusca(evento.target.value);
   };
 
   return (
-    <PesquisaContainer>
+    <ContainerDePesquisa>
       <InputEstilizado
         type="search"
         placeholder="Pesquisar"
-        onChange={handleInputChange}
+        onChange={lidarComMudanca}
       />
       <IconeEstilizado className="bi bi-search lupa" />
-    </PesquisaContainer>
+    </ContainerDePesquisa>
   );
 };
 
-export default InputPesquisa;
+export default InputDePesquisa;

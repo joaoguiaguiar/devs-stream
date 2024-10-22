@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { SearchContext } from '../../context/SearchContext';
+import { ContextoDeBusca  } from '../../context/SearchContext';
 import VideoCard from './VideoCard';
 import styled from 'styled-components';
 import axios from 'axios';
@@ -19,12 +19,12 @@ const VideosMostra: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     
 
-    const context = useContext(SearchContext);
+    const context = useContext(ContextoDeBusca );
     if (!context) {
         throw new Error("FALHA");
     }
     
-    const { searchTerm, categoryFilter } = context; 
+    const { termoDeBusca, filtroDeCategoria } = context; 
 
     useEffect(() => {
         const obterDados = async () => {
@@ -41,8 +41,8 @@ const VideosMostra: React.FC = () => {
     }, []);
 
     const videosFiltrados = videos.filter((video) => {
-        const tituloMatches = video.titulo.toLowerCase().includes(searchTerm.toLowerCase());
-        const categoriaMatches = categoryFilter === 'tudo' || video.categoria.toLowerCase().includes(categoryFilter.toLowerCase());
+        const tituloMatches = video.titulo.toLowerCase().includes(termoDeBusca.toLowerCase());
+        const categoriaMatches = filtroDeCategoria === 'tudo' || video.categoria.toLowerCase().includes(filtroDeCategoria.toLowerCase());
         return tituloMatches && categoriaMatches;
     });
 
