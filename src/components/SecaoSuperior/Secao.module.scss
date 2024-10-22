@@ -1,0 +1,41 @@
+.container__wrapper__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 80%; 
+    overflow-x: auto;  
+    white-space: nowrap; 
+    padding: 0.5em 0; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+
+    .superior__item {
+        background-color: #F2F2F2;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 1rem;
+        color: black;
+        font-weight: bolder;
+        margin-right: 1em; 
+        font-size: 1rem;
+
+        &:hover {
+            background-color: #848484; 
+            transition: background-color 0.3s ease; 
+        }
+    }
+
+    @media (max-width: 768px) { 
+        padding: 0.5em; 
+        width: 100%; 
+
+        .superior__item {
+            padding: 0.3em 1em;
+            font-size: 0.8rem;
+
+            &:hover {
+                background-color: #848484; 
+                transition: background-color 0.3s ease; 
+            }
+        }
+    }
+}

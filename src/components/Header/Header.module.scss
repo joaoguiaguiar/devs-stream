@@ -1,0 +1,58 @@
+.header__nav {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    padding: 0 1rem; 
+
+    .logo {
+        height: 8rem;
+        width: auto;
+        border-radius: 10rem;
+    }
+
+
+
+    .criaVideo__btn {
+        text-decoration: none;
+        background-color: black;
+        padding: 0.5em 2em;
+        color: white;
+        border-radius: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .microfone__btn{
+        left: 42rem;
+        background-color: #81818194;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .criaVideo__btn:hover {
+        background-color: rgb(38, 33, 33);
+    }
+
+
+    @media (max-width: 768px) {
+        justify-content: space-between; 
+
+        .logo {
+            height: 2.5rem; 
+        }
+
+        .criaVideo__btn {
+            padding: 0.3em 1em;
+            font-size: 0.8rem;
+        }
+
+        figure {
+            margin-top: 1rem;
+        }
+    }
+    
+}
