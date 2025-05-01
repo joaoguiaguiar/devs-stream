@@ -30,6 +30,6 @@ A aplicação conta com:
 
 ### Documentação (PDF)
 
-[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://github.com/joaoguiaguiar/NOME-DO-SEU-REPO/blob/main/ANÁLISE%20E%20PROJETO%20DE%20SISTEMAS%20II%20slide%20pdf.pdf)
+[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://drive.google.com/file/d/SEU_ID_DO_ARQUIVO/view)
 
 > Clique acima para visualizar a análise do sistema com os principais diagramas e requisitos definidos no início do projeto.
