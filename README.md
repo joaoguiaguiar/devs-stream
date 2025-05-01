@@ -1,21 +1,35 @@
-Sobre
+### DevStream – Projeto Acadêmico
 
-O Devstream foi meu primeiro projeto no qual implementei funcionalidades bastante comuns em aplicações modernas. O projeto surgiu como parte de uma atividade da faculdade, na disciplina de Análise de Projetos e Sistemas. A atividade envolvia, inicialmente, a análise de requisitos funcionais e não funcionais, criação de diagramas de classes, diagramas de casos de uso, entre outros, para planejar e moldar o projeto de forma estruturada.
+O **DevStream** foi meu primeiro projeto no qual implementei funcionalidades bastante comuns em aplicações modernas. Surgiu como parte de uma atividade da faculdade na disciplina de **Análise de Projetos e Sistemas**, que envolveu:
 
-O projeto conta com funções de navegação bem definidas e interatividade com o usuário. Utilize MyJsonServer para a criação de uma API local e Axios para fazer as requisições HTTP. A aplicação possui recursos como pesquisa de vídeos, um filtro de categorias para aplicar ao conteúdo exibido e até a opção de publicar vídeos.
+- Levantamento de requisitos funcionais e não funcionais  
+- Criação de diagramas de casos de uso, atividades, sequência e classes  
+- Estruturação e planejamento do sistema com base em boas práticas
 
-Esses recursos foram implementados utilizando GET e POST para manipulação de dados, proporcionando uma experiência dinâmica e interativa para o usuário.
+A aplicação conta com:
 
-Tecnologias Utilizadas
+- Navegação fluida com React Router  
+- Busca dinâmica de vídeos  
+- Filtro de categorias  
+- Publicação de vídeos via formulário (requisições POST)  
+- Consumo de API local com Axios e MyJsonServer
 
-	•	React
-	•	TypeScript
-	•	Bootstrap
-	•	SCSS
-	•	React Router DOM
-	•	Axios
-	•	MyJsonServer
+### Tecnologias Utilizadas
 
-Link do Projeto:
+- React  
+- TypeScript  
+- Bootstrap  
+- SCSS  
+- React Router DOM  
+- Axios  
+- MyJsonServer  
 
-https://devstream-sand.vercel.app/
+### Link do Projeto
+
+[**Acesse o DevStream no Vercel**](https://devstream-sand.vercel.app/)
+
+### Documentação (PDF)
+
+[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://github.com/joaoguiaguiar/NOME-DO-SEU-REPO/blob/main/ANÁLISE%20E%20PROJETO%20DE%20SISTEMAS%20II%20slide%20pdf.pdf)
+
+> Clique acima para visualizar a análise do sistema com os principais diagramas e requisitos definidos no início do projeto.
