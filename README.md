@@ -1,4 +1,4 @@
-### DevStream – Projeto Acadêmico
+# DevStream – Projeto Acadêmico
 
 O **DevStream** foi meu primeiro projeto no qual implementei funcionalidades bastante comuns em aplicações modernas. Surgiu como parte de uma atividade da faculdade na disciplina de **Análise de Projetos e Sistemas**, que envolveu:
 
