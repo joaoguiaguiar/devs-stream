@@ -32,6 +32,6 @@ A aplicação conta com:
 
 ## Documentação do Projeto
 
-[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://drive.google.com/file/d/15SKO-_WWmAOkGSBTqhJQTOERPkhCgXyd/view)
+[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://drive.google.com/file/d/1Rszior6G7wtczdsseDqqu2XmzBuoukQU/view?usp=sharing)
 
 > Clique acima para visualizar a análise do sistema com os principais diagramas e requisitos definidos no início do projeto.
