@@ -1,25 +1,26 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ContextoDeBusca  } from '../../context/SearchContext';
+import { ContextoDeBusca } from '../../context/SearchContext';
 import VideoCard from './VideoCard';
 import styled from 'styled-components';
 import axios from 'axios';
 import Video from '../../interfaces/videos';
 
-const ContainerVideosEstilizados = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
+const VideoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); // AUMENTEI de 320px para 350px
+  gap: 24px;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const VideosMostra: React.FC = () => {
     const [videos, setVideos] = useState<Video[]>([]);
     const [error, setError] = useState<string | null>(null);
     
-
-    const context = useContext(ContextoDeBusca );
+    const context = useContext(ContextoDeBusca);
     if (!context) {
         throw new Error("FALHA");
     }
@@ -47,16 +48,16 @@ const VideosMostra: React.FC = () => {
     });
 
     return (
-        <ContainerVideosEstilizados>
-            {error && <p>{error}</p>}
+        <VideoGrid>
+            {error && <p style={{ color: 'white', gridColumn: '1/-1', textAlign: 'center' }}>{error}</p>}
             {videosFiltrados.length > 0 ? (
                 videosFiltrados.map((video) => (
                     <VideoCard video={video} key={video.id} />
                 ))
             ) : (
-                <p>Nenhum vídeo encontrado.</p>
+                <p style={{ color: 'white', gridColumn: '1/-1', textAlign: 'center' }}>Nenhum vídeo encontrado.</p>
             )}
-        </ContainerVideosEstilizados>
+        </VideoGrid>
     );
 };
 

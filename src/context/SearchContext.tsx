@@ -6,7 +6,7 @@ interface TipoDeContextoDeBusca {
     setTermoDeBusca: React.Dispatch<React.SetStateAction<string>>;
     filtroDeCategoria: string;
     setFiltroDeCategoria: React.Dispatch<React.SetStateAction<string>>;
-    adicionarVideo: (video: Video) => void; // Nova função
+    adicionarVideo: (video: Video) => void; 
   }
   
   export const ContextoDeBusca = createContext<TipoDeContextoDeBusca | undefined>(undefined);

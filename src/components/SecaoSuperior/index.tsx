@@ -1,44 +1,67 @@
-import React, { useContext } from 'react';
-import { ContextoDeBusca  } from '../../context/SearchContext';
+import React, { useContext, useState } from 'react';
+import { ContextoDeBusca } from '../../context/SearchContext';
 import styled from 'styled-components';
 import styles from './Secao.module.scss';
 
 const SectionEstilizado = styled.section`
-  height: 6rem;
-  background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 24px 40px;
+  background: rgba(18, 18, 27, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding: 20px 24px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px 12px;
+  }
 `;
 
 const SecaoSuperior: React.FC = () => {
-  const context = useContext(ContextoDeBusca );
+  const context = useContext(ContextoDeBusca);
+  const [categoriaAtiva, setCategoriaAtiva] = useState('tudo');
 
   if (!context) {
-    return <div>Error: Context is not available</div>;
+    return <div>Erro no contextAPI</div>;
   }
 
   const { setFiltroDeCategoria } = context;
 
-  const identificadorCategoryClick = (evento: React.MouseEvent<HTMLAnchorElement>) => {
-    evento.preventDefault();
-    const category = evento.currentTarget.getAttribute('data-name');
-    
-    if (category) {
-      setFiltroDeCategoria(category);
-    }
+  const categorias = [
+    { key: 'tudo', label: 'Todos' },
+    { key: 'Front-end', label: 'Front End' },
+    { key: 'Back-end', label: 'Back End' },
+    { key: 'Banco de dados', label: 'Banco de Dados' },
+    { key: 'UX', label: 'UX Design' },
+    { key: 'Desenvolvedor de Software', label: 'Dev Software' },
+    { key: 'DevOps', label: 'DevOps' }
+  ];
+
+  const handleClick = (categoria: string) => {
+    setFiltroDeCategoria(categoria);
+    setCategoriaAtiva(categoria);
   };
 
   return (
     <SectionEstilizado>
       <div className={styles.container__wrapper__btn}>
-        <a href="#" data-name="Front-end" className={styles.superior__item} onClick={identificadorCategoryClick}>Front End</a>
-        <a href="#" data-name="Back-end" className={styles.superior__item} onClick={identificadorCategoryClick}>Back End</a>
-        <a href="#" data-name="Banco de dados" className={styles.superior__item} onClick={identificadorCategoryClick}>Banco de Dados</a>
-        <a href="#" data-name="UX" className={styles.superior__item} onClick={identificadorCategoryClick}>UX Design</a>
-        <a href="#" data-name="Desenvolvedor de Software" className={styles.superior__item} onClick={identificadorCategoryClick}>Desenvolvimento de Software</a>
-        <a href="#" data-name="DevOps" className={styles.superior__item} onClick={identificadorCategoryClick}>DevOps</a>
+        {categorias.map((categoria) => (
+          <button
+            key={categoria.key}
+            className={`${styles.superior__item} ${
+              categoriaAtiva === categoria.key ? styles.active : ''
+            }`}
+            onClick={() => handleClick(categoria.key)}
+            aria-label={`Filtrar por ${categoria.label}`}
+          >
+            {categoria.label}
+          </button>
+        ))}
       </div>
     </SectionEstilizado>
   );

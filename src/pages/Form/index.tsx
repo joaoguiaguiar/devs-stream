@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import FormularioVideo from '../../components/Formulario/index';
 import axios from 'axios';
 import Video from '../../interfaces/videos';
-
+import Footer from '../../components/Footer';
 
 const FormPage = () => {
   const [videos, setVideos] = useState<Video[]>([]);
@@ -27,6 +27,7 @@ const FormPage = () => {
   return (
     <div>
       <FormularioVideo adicionarVideo={adicionarVideo} />
+      <Footer/>
     </div>
   );
 };
