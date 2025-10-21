@@ -30,7 +30,7 @@ A aplicação conta com:
 
 ### Link do Projeto
 
-[**Acesse o DevStream no Vercel**](https://devstream-sand.vercel.app/)
+[**Acesse o DevStream no Vercel**](https://devstream-react.vercel.app/)
 
 ---
 
