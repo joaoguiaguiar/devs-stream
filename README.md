@@ -48,10 +48,8 @@ A aplicação conta com:
 
 O DevStream consome uma **API fictícia** hospedada no **MyJSON Server**, utilizada apenas para fins acadêmicos durante o desenvolvimento da aplicação.
 
-🔗 **Acesse o repositório da API no GitHub:**  
-[https://github.com/joaoguiaguiar/videos-API](https://devstream-react.vercel.app/)
 
-📡 **Base URL da API (MyJSON Server):**  
-[https://my-json-server.typicode.com/joaoguiaguiar/videos-API](https://my-json-server.typicode.com/joaoguiaguiar/videos-API)
+📡 **Acesse o repositório da API no GitHub:**  
+[https://github.com/joaoguiaguiar/videos-API](https://github.com/joaoguiaguiar/videos-API)
 
 > A API é apenas um mock de dados (não persiste alterações via POST/PUT/DELETE) e foi criada como parte do trabalho da disciplina **Análise e Projetos de Sistemas**.
