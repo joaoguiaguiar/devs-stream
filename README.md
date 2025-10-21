@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# DevStream – Projeto Acadêmico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **DevStream** foi meu primeiro projeto no qual implementei funcionalidades bastante comuns em aplicações modernas. Surgiu como parte de uma atividade da faculdade na disciplina de **Análise de Projetos e Sistemas**, que envolveu:
 
-Currently, two official plugins are available:
+- Levantamento de requisitos funcionais e não funcionais  
+- Criação de diagramas de casos de uso, atividades, sequência e classes  
+- Estruturação e planejamento do sistema com base em boas práticas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A aplicação conta com:
 
-## Expanding the ESLint configuration
+- Navegação fluida com React Router  
+- Busca dinâmica de vídeos  
+- Filtro de categorias  
+- Publicação de vídeos via formulário (requisições POST)  
+- Consumo de API local com Axios e MyJsonServer
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- React  
+- TypeScript  
+- Bootstrap  
+- SCSS  
+- React Router DOM  
+- Axios  
+- MyJsonServer  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Link do Projeto
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+[**Acesse o DevStream no Vercel**](https://devstream-sand.vercel.app/)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Documentação (PDF)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Documentação do Projeto
+
+[![Abrir Documentação](https://img.shields.io/badge/Abrir%20documentação-PDF-blue?logo=adobeacrobatreader)](https://drive.google.com/file/d/1Rszior6G7wtczdsseDqqu2XmzBuoukQU/view?usp=sharing)
+
+> Clique acima para visualizar a análise do sistema com os principais diagramas e requisitos definidos no início do projeto.
