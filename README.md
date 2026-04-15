@@ -44,12 +44,12 @@ A aplicação conta com:
 
 ---
 
-### 🧠 Repositório da API (MyJSON Server)
+### Repositório da API (MyJSON Server)
 
 O DevStream consome uma **API fictícia** hospedada no **MyJSON Server**, utilizada apenas para fins acadêmicos durante o desenvolvimento da aplicação.
 
 
-## 📡 *Acesse o repositório da API no GitHub:*
+## *Acesse o repositório da API no GitHub:*
 [https://github.com/joaoguiaguiar/videos-API](https://github.com/joaoguiaguiar/videos-API)
 
 > A API é apenas um mock de dados (não persiste alterações via POST/PUT/DELETE) e foi criada como parte do trabalho da disciplina **Análise e Projetos de Sistemas**.
